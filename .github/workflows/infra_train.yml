@@ -8,7 +8,7 @@ on:
       - 'infra/**'
  
 env:
-  AZURE_RESOURCE_GROUP: tryml 
+  AZURE_RESOURCE_GROUP: tryml2 
     
 jobs:
   deployment:
