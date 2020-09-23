@@ -8,7 +8,8 @@ on:
       - 'infra/**'
  
 env:
-  AZURE_RESOURCE_GROUP: tryml2 
+  AZURE_RESOURCE_GROUP: tryml3
+  #STORAGE_ACCOUNT: storage-account-name
     
 jobs:
   deployment:
@@ -38,7 +39,7 @@ jobs:
             --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
             --template-file $GITHUB_WORKSPACE/infra/deploy.core-infra.json \
             --parameters $GITHUB_WORKSPACE/infra/params.deploy.core-infra.json \
-            patToken=${{secrets.PATTOKEN}} repo_name=$GITHUB_REPOSITORY 
+            patToken=${{secrets.PATTOKEN}} repo_name=$GITHUB_REPOSITORY DataLakestorageName=${{ env.STORAGE_ACCOUNT }}
 
     # Connect the Azure Machine Learning Workspace
     - name: Connect Azure Machine Learning Workspace
