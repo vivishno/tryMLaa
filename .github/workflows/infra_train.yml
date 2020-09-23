@@ -8,7 +8,7 @@ on:
       - 'infra/**'
  
 env:
-  AZURE_RESOURCE_GROUP: your-resource-group-name
+  AZURE_RESOURCE_GROUP: tryml
   STORAGE_ACCOUNT: storage-account-name
     
 jobs:
