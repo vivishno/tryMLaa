@@ -241,6 +241,7 @@
       },
       "DataLakestorageName": {
         "type": "string",
+          "defaultValue": "",
         "metadata": {
           "description": "Provide the existing data lake storage account name."
         }
